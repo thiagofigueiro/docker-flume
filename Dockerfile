@@ -1,5 +1,5 @@
 FROM debian:jessie
-MAINTAINER Alex Wilson a.wilson@alumni.warwick.ac.uk
+MAINTAINER Thiago Figueiro thiagocsf@gmail.com
 
 RUN apt-get update && apt-get install -q -y --no-install-recommends wget netcat
 

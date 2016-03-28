@@ -48,7 +48,7 @@ docker rm flume-example-a1
 Create your own `Dockerfile` using this as the base image and include the Flume configuration file:
 
 ```Dockerfile
-FROM probablyfine/flume
+FROM thiagofigueiro/flume
 ADD flume.conf /var/tmp/flume.conf
 ```
 
