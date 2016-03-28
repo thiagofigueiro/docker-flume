@@ -1,4 +1,7 @@
 ## docker-flume
+![Build Status](https://api.travis-ci.org/thiagofigueiro/docker-flume.svg)
+![Docker Stars](https://img.shields.io/docker/stars/thiagofigueiro/flume.svg?link=https://hub.docker.com/r/thiagofigueiro/flume/)
+![Docker Pulls](https://img.shields.io/docker/pulls/thiagofigueiro/flume.svg?link=https://hub.docker.com/r/thiagofigueiro/flume/)
 
 Docker image containing [Apache Flume](https://flume.apache.org/)
 
@@ -15,7 +18,7 @@ Docker image containing [Apache Flume](https://flume.apache.org/)
 Build the image:
 
 ```bash
-    docker build -t flume .
+docker build -t flume .
 ```
 
 Create container:
