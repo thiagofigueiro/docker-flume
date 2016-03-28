@@ -66,3 +66,7 @@ docker run \
   -e FLUME_CONF_FILE=/var/tmp/flume.conf \
   my-flume-image # [other arguments]
 ```
+
+## Acknowledgements
+
+* Initial version by @mrwilson https://github.com/mrwilson/docker-flume
