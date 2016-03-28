@@ -1,6 +1,7 @@
 FROM debian:jessie
 MAINTAINER Thiago Figueiro thiagocsf@gmail.com
 ENV FLUME_VERSION 1.6.0
+ENV FLUME_HOME /opt/flume
 
 RUN apt-get update && apt-get install -q -y --no-install-recommends wget netcat
 
@@ -9,9 +10,9 @@ RUN wget --no-check-certificate --header "Cookie: oraclelicense=accept-securebac
   http://download.oracle.com/otn-pub/java/jdk/8u77-b03/jre-8u77-linux-x64.tar.gz \
   | tar zxvf - -C /opt/java --strip 1
 
-RUN mkdir /opt/flume
+RUN mkdir $FLUME_HOME
 RUN wget -qO- http://archive.apache.org/dist/flume/$FLUME_VERSION/apache-flume-"$FLUME_VERSION"-bin.tar.gz \
-  | tar zxvf - -C /opt/flume --strip 1
+  | tar zxvf - -C $FLUME_HOME --strip 1
 
 ENV FLUME_AGENT_NAME a1
 ENV FLUME_CONF_DIR /opt/flume/conf
