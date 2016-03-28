@@ -1,7 +1,5 @@
 #!/bin/bash
 
-FLUME_CONF_DIR=${FLUME_CONF_DIR:-/opt/flume/conf}
-
 [[ -z "${FLUME_CONF_FILE}"  ]] && { echo "FLUME_CONF_FILE required";  exit 1; }
 [[ -z "${FLUME_AGENT_NAME}" ]] && { echo "FLUME_AGENT_NAME required"; exit 1; }
 
