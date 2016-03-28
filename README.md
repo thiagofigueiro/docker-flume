@@ -64,5 +64,5 @@ And to run:
 docker run \
   -e FLUME_AGENT_NAME=someagent \
   -e FLUME_CONF_FILE=/var/tmp/flume.conf \
-  my-flume-image
+  my-flume-image # [other arguments]
 ```
