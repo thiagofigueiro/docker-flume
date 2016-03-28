@@ -6,10 +6,10 @@ services:
 before_install:
   - docker build -t thiagofigueiro/flume:ci .
   - sudo service docker restart ; sleep 10
-  - docker run -d --name=flume-example-a1 thiagofigueiro/flume:ci
+  - docker run -d -p 127.0.0.1:44444:44444 thiagofigueiro/flume:ci
 
 script:
-  - docker exec -i -t flume-example-a1 bash -c 'echo "Hello world" | nc -q 1 localhost 44444'
+  - echo "Hello world" | nc -q 1 localhost 44444
 
 after_script:
   - docker rm -f $(docker ps -a -q)
